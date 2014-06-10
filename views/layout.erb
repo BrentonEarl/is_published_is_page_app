@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Is Published/Page Test</title>
+</head>
+<body>
+<nav>
+	<h1>Site Title</h1>
+	<p>This is the tagline.</p>
+	<ul>
+		<li><a href="/">Home</a>
+		<li><a href="/admin">Admin</a>
+	<% @menu.each do |link| %>
+		<li><a href="/page/<%= link.id %>"><%= link.title %></a></li>
+	<% end %>
+	</ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

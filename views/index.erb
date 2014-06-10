@@ -1,0 +1,10 @@
+<article>
+  <h2>All Posts</h2>
+  <% @all_posts.each do |post| %>
+    <p>
+      <%= post.created_at %> &raquo; <a href="/post/<%= post.id %>"><%= post.title %></a><br />
+      <%= post.body[0..100] %>...<br />
+      <a href="/post/<%= post.id %>">Continue reading</a>
+    </p>
+  <% end %>
+</article>

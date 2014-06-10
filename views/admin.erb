@@ -1,0 +1,27 @@
+<h3>Unpublished Pgaes</h3>
+<table>
+	<tr>
+		<th>Page Title</th>
+		<th>Page Body</th>
+	</tr>
+	<tr>
+		<% @unpublished_pages.each do |page| %>
+		<td><%= page.title %></td>
+		<td><%= page.body %></td>
+		<% end %>
+	</tr>
+</table>
+
+<h3>Unpublished Posts</h3>
+<table>
+	<tr>
+		<th>Page Title</th>
+		<th>Page Body</th>
+	</tr>
+	<tr>
+		<% @unpublished_posts.each do |post| %>
+		<td><%= post.title %></td>
+		<td><%= post.body %></td>
+		<% end %>
+	</tr>
+</table>
